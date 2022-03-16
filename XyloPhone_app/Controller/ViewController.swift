@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func songButtonPressed(_ sender: UIButton) {
+        if let keywords = sender.titleLabel?.text {
+            print(keywords)
+        }
+    }
+    
 }
 
