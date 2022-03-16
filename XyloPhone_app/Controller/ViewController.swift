@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBAction func songButtonPressed(_ sender: UIButton) {
         if let keywords = sender.titleLabel?.text {
             print(keywords)
+            print("deneme")
         }
     }
     
