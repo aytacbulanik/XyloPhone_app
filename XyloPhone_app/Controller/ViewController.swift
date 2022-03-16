@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         if let buttonName = sender.currentTitle {
             songBrain.songPlay(name: buttonName)
+            sender.alpha = 0.5
+            songBrain.buttonColorChanged(sender: sender)
         }
     }
     

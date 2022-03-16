@@ -22,4 +22,9 @@ struct SongBrain {
         }
         player.play()
     }
+    func buttonColorChanged(sender : UIButton) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            sender.alpha = 1.0
+        }
+    }
 }
