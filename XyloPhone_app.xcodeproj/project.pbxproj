@@ -14,6 +14,7 @@
 		B407FD3427E2881A00AAC57F /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = B407FD2E27E2881A00AAC57F /* E.wav */; };
 		B407FD3527E2881A00AAC57F /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = B407FD2F27E2881A00AAC57F /* C.wav */; };
 		B407FD3627E2881A00AAC57F /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = B407FD3027E2881A00AAC57F /* G.wav */; };
+		B409E97127F9C77D00F59FE2 /* SongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B409E97027F9C77D00F59FE2 /* SongsVC.swift */; };
 		B4C2703927DFC28A001AB20B /* SongBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C2703827DFC28A001AB20B /* SongBrain.swift */; };
 		B4C2703A27DFC28A001AB20B /* SongBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C2703827DFC28A001AB20B /* SongBrain.swift */; };
 		B4F9203E27DF2E76002BE562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F9203D27DF2E76002BE562 /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		B407FD2E27E2881A00AAC57F /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
 		B407FD2F27E2881A00AAC57F /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
 		B407FD3027E2881A00AAC57F /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
+		B409E97027F9C77D00F59FE2 /* SongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsVC.swift; sourceTree = "<group>"; };
 		B4C2703827DFC28A001AB20B /* SongBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongBrain.swift; sourceTree = "<group>"; };
 		B4F9203A27DF2E76002BE562 /* XyloPhone_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XyloPhone_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9203D27DF2E76002BE562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				B4F9204127DF2E76002BE562 /* ViewController.swift */,
+				B409E97027F9C77D00F59FE2 /* SongsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				B4C2703927DFC28A001AB20B /* SongBrain.swift in Sources */,
 				B4F9203E27DF2E76002BE562 /* AppDelegate.swift in Sources */,
 				B4F9204027DF2E76002BE562 /* SceneDelegate.swift in Sources */,
+				B409E97127F9C77D00F59FE2 /* SongsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
