@@ -30,8 +30,11 @@ extension SongsVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Deneme"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SongsCellVC
+        cell.songDetailLabel.text = "deneme şarkısı"
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
 }

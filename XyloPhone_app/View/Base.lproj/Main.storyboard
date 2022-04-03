@@ -165,11 +165,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="98" id="HQt-XX-h3p">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="98"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="107" id="HQt-XX-h3p" customClass="SongsCellVC" customModule="XyloPhone_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="107"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HQt-XX-h3p" id="EmW-hU-agB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-zc-QgS">
@@ -182,7 +182,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEY-xU-JDe">
-                                                    <rect key="frame" x="287" y="38.5" width="60" height="21"/>
+                                                    <rect key="frame" x="287" y="43" width="60" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="wdt-0I-b6W"/>
                                                     </constraints>
@@ -191,13 +191,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig6-FT-rIa">
-                                                    <rect key="frame" x="367" y="31" width="37" height="36"/>
+                                                    <rect key="frame" x="367" y="35.5" width="37" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Play"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03/Mart/2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXG-U3-KyM">
-                                                    <rect key="frame" x="30" y="60" width="100" height="17"/>
+                                                    <rect key="frame" x="30" y="69" width="100" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="MLn-3r-HFi"/>
                                                     </constraints>
@@ -220,6 +220,11 @@
                                                 <constraint firstItem="GEY-xU-JDe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EmW-hU-agB" secondAttribute="leading" constant="20" symbolic="YES" id="ykU-RP-dJ1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="songCreateTimeLabel" destination="YXG-U3-KyM" id="gQg-sJ-JY3"/>
+                                            <outlet property="songDetailLabel" destination="wcg-zc-QgS" id="syL-ob-bUa"/>
+                                            <outlet property="songTimeLabel" destination="GEY-xU-JDe" id="q1S-LF-vY6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
