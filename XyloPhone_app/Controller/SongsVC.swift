@@ -20,7 +20,7 @@ class SongsVC: UIViewController {
     
 
 }
-
+// tableView işlemleri burada yapılıyor.
 extension SongsVC : UITableViewDelegate , UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
