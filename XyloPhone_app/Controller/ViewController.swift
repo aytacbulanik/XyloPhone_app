@@ -91,5 +91,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             // recording failed :(
         }
     }
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
 }
 
