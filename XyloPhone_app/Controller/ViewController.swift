@@ -14,6 +14,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var player : AVAudioPlayer!
     var recordingSession : AVAudioSession!
     var audioRecorder : AVAudioRecorder!
+    
+    @IBOutlet weak var recordButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
@@ -75,6 +77,18 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
            // recordButton.setTitle("Tap to Stop", for: .normal)
         } catch {
           //  finishRecording(success: false)
+        }
+    }
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+
+        if success {
+            recordButton.setTitle("Tap to Re-record", for: .normal)
+        } else {
+            recordButton.setTitle("Tap to Record", for: .normal)
+            // recording failed :(
         }
     }
 }
