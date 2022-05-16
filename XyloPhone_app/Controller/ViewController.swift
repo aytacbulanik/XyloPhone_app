@@ -12,21 +12,23 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 
     var songBrain = SongBrain()
     var player : AVAudioPlayer!
-    var recordingSession : AVAudioSession?
+    var recordButton: UIButton!
+    var recordingSession : AVAudioSession!
     var audioRecorder : AVAudioRecorder!
     
-    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var recordButton2: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordingSession = AVAudioSession.sharedInstance()
         do {
-            try recordingSession?.setCategory(.playAndRecord, mode: .default)
-            try recordingSession?.setActive(true)
-            recordingSession?.requestRecordPermission() { [unowned self] allowed in
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
                     DispatchQueue.main.async {
                         if allowed {
                            self.loadRecordingUI()
                         } else {
-                            // failed to record!
+                            print("burda hata oldu")
                         }
                     }
                 }
@@ -35,7 +37,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     func loadRecordingUI() {
-        recordButton = UIButton(frame: CGRect(x: 10, y: 10, width: 128, height: 64))
+        recordButton = UIButton(frame: CGRect(x: 30, y: 30, width: 128, height: 64))
         recordButton.setTitle("Tap to Record", for: .normal)
         recordButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         recordButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
@@ -48,14 +50,19 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             sender.alpha = 0.5
             songBrain.buttonColorChanged(sender: sender)
         }
+        if audioRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
     }
     
     @IBAction func soundRecordButton(_ sender: UIButton) {
         func recordTapped() {
             if audioRecorder == nil {
-               // startRecording()
+               startRecording()
             } else {
-               // finishRecording(success: true)
+               finishRecording(success: true)
             }
         }
     }
