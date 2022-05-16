@@ -12,16 +12,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 
     var songBrain = SongBrain()
     var player : AVAudioPlayer!
-    var recordingSession : AVAudioSession!
+    var recordingSession : AVAudioSession?
     var audioRecorder : AVAudioRecorder!
     
     @IBOutlet weak var recordButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
+            try recordingSession?.setCategory(.playAndRecord, mode: .default)
+            try recordingSession?.setActive(true)
+            recordingSession?.requestRecordPermission() { [unowned self] allowed in
                     DispatchQueue.main.async {
                         if allowed {
                            // self.loadRecordingUI()
